@@ -1,4 +1,4 @@
-int createWaiting2(int puzzle[3][3][3], int x, int y, int z, int pNum) {
+int createWaiting2(int puzzle[3][3][3], int x, int y, int z, int pNum) {//テストです
     int i;
     int totalCnt = 0;
     int cnt;
