@@ -1,3 +1,4 @@
+//Â§âÊõ¥
 #include <DxLib.h>
 #include <windows.h>
 #include <stdio.h>
@@ -24,7 +25,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     char think[4][12] = { "thinking","thinking.","thinking..","thinking..." };
     int pNum = 1; //playerNumber
     int diNum = 2;
-    int pOrder=1; //playerÇÃèáî‘Å@1ÅFêÊçsÅ@2ÅFå„çU
+    int pOrder=1; //player„ÅÆÈ†ÜÁï™„ÄÄ1ÔºöÂÖàË°å„ÄÄ2ÔºöÂæåÊîª
     int pFlag=0, cFlag=0;
     int num;
     int i,j;
@@ -34,7 +35,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     int GrHandle,pHandle, textHandle,barHandle;
 
     //*************************************
-    //ÉOÉâÉtÉBÉbÉNê›íË
+    //„Ç∞„É©„Éï„Ç£„ÉÉ„ÇØË®≠ÂÆö
     //*************************************
     SetBackgroundColor(241,237, 238);
     SetGraphMode(800, 600, 32);
@@ -45,7 +46,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     textHandle = CreateFontToHandle("Lucida Console", 60, 3);
     //************************************************
-    //ÉXÉ^Å[ÉgâÊñ 
+    //„Çπ„Çø„Éº„ÉàÁîªÈù¢
     //************************************************
     barHandle = CreateFontToHandle("Lucida Console", 30, 3);
     textHandle = CreateFontToHandle("Lucida Console", 60, 3);
@@ -57,7 +58,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     DrawLineAA(0.0f,459.0f,800.0f,459.0f,Cr);
     DrawLineAA(0.0f, 530.0f, 800.0f, 530.0f, Cr);
     Cr = GetColor(61, 84, 103);
-    DrawStringToHandle(760, 5, "Å~", Cr,barHandle);
+    DrawStringToHandle(760, 5, "√ó", Cr,barHandle);
     DrawStringToHandle(256,465,menu[0], Cr, textHandle);
     DrawStringToHandle(256, 536, menu[1], Cr, textHandle);
     ScreenFlip();
@@ -68,7 +69,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
             Cr = GetColor(209, 204, 220);
             DrawBoxAA(735.0f, 0.0f, 800.0f, 39.0f, Cr, TRUE);
             Cr = GetColor(61, 84, 103);
-            DrawStringToHandle(760, 5, "Å~", Cr, barHandle);
+            DrawStringToHandle(760, 5, "√ó", Cr, barHandle);
             ScreenFlip();
             while (735 < mouseX && mouseX < 800 && 0 < mouseY && mouseY < 40) {
                 if ((GetMouseInput() & MOUSE_INPUT_LEFT) == 1) break;
@@ -83,7 +84,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
                 Cr = GetColor(241, 237, 238);
                 DrawBoxAA(735.0f, 0.0f, 800.0f, 39.0f, Cr, TRUE);
                 Cr = GetColor(61, 84, 103);
-                DrawStringToHandle(760, 5, "Å~", Cr, barHandle);
+                DrawStringToHandle(760, 5, "√ó", Cr, barHandle);
                 ScreenFlip();
             }
         }
@@ -117,7 +118,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     
     if (i == 0) {
         //************************************************
-        //ëIëâÊñ 
+        //ÈÅ∏ÊäûÁîªÈù¢
         //************************************************
         ClearDrawScreen();
         Cr = GetColor(209, 204, 220);
@@ -239,7 +240,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         }
 
         //************************************************
-        //ÉQÅ[ÉÄâÊñ 
+        //„Ç≤„Éº„É†ÁîªÈù¢
         //************************************************
         ClearDrawScreen();
         Cr = GetColor(209, 204, 220);
@@ -256,7 +257,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
         while (1) {
             //************************************************
-            //PlayerÇÃëÄçÏ
+            //Player„ÅÆÊìç‰Ωú
             //************************************************
             if (pNum == pOrder) {
                 Cr = GetColor(241, 237, 238);
@@ -297,7 +298,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
                 fill(x, y, z, 1);
             }
             //************************************************
-            //computerÇÃëÄçÏ
+            //computer„ÅÆÊìç‰Ωú
             //************************************************
             else {
                 Cr = GetColor(241, 237, 238);
@@ -369,8 +370,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         WaitKey();
     }
     
-    DxLib_End();            // ÇcÇwÉâÉCÉuÉâÉäégópÇÃèIóπèàóù
-    return 0;            // É\ÉtÉgÇÃèIóπ
+    DxLib_End();            // Ôº§Ôº∏„É©„Ç§„Éñ„É©„É™‰ΩøÁî®„ÅÆÁµÇ‰∫ÜÂá¶ÁêÜ
+    return 0;            // „ÇΩ„Éï„Éà„ÅÆÁµÇ‰∫Ü
 }
 
 void search(int order,int puzzle[][3][3], int* x, int* y, int* z, int pNum) {
